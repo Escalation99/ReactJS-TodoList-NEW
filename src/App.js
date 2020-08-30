@@ -11,13 +11,13 @@ function App() {
 
   //efek jalan tiap kali suatu state yg di dalam kurung [] berubah
 
-  useEffect(() => {
-    getLocalTodos();
-  }, [])
+  // useEffect(() => {
+  //   getLocalTodos();
+  // }, [])
 
   useEffect(() => {
     filterHandler();
-    saveLocalTodos();
+    // saveLocalTodos();
   }, [todos, status])
 
   const filterHandler = () => {
@@ -34,18 +34,18 @@ function App() {
     }
   }
 
-  const saveLocalTodos = () => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }
+  // const saveLocalTodos = () => {
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }
 
-  const getLocalTodos = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
-    }
-  }
+  // const getLocalTodos = () => {
+  //   if (localStorage.getItem('todos') === null) {
+  //     localStorage.setItem('todos', JSON.stringify([]));
+  //   } else {
+  //     let todoLocal = JSON.parse(localStorage.getItem("todos"));
+  //     setTodos(todoLocal);
+  //   }
+  // }
 
   return (
     <div className="App">
